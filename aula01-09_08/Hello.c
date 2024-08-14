@@ -3,17 +3,14 @@
 
 int main()
 {
-    double n1, n2, sum;
+    char caracter_char;
+    char caracter_int;
+    
+    caracter_char = 'a';
+    caracter_int = 97;
 
-    printf("Digite o número 1: ");
-    scanf("%lf", &n1);
+    printf("Caractere: %c\n", caracter_char);
+    printf("Tabela ASCII: %c\n", caracter_int);
 
-
-    printf("Digite o número 2: ");
-    scanf("%lf", &n2);
-
-    sum = n1 + n2;
-
-    printf("Soma total dos números %.2lf", sum);
     return 0;
 }
