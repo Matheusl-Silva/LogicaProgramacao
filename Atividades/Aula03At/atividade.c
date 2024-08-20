@@ -3,7 +3,19 @@
 
 int main()
 {
+  float gasolina, dinheiro, valorGasolina;
 
+  //gasolina = 5.90;
+  printf("Digite o valor do combustivel: \n");
+  scanf("%f", &gasolina);
+
+  printf("A Gasolina Custa %.2f\nDigite o valor que deseja abastecer: ", gasolina);
+  scanf("%f", &dinheiro);
+  
+  valorGasolina = dinheiro / gasolina;
+ 
+  printf("O total de litros foi de: %.2f", valorGasolina);
+  return 0;
 }  
 
 void calcularIdadeemDias(){
