@@ -4,19 +4,12 @@
 
 int main()
 {
-    double angulo, seno, cosseno, tangente;
+    double numero, resultado;
+    printf("Digite um numero para saber sua raiz: \n");
+    scanf("%lf", &numero);
 
-    printf("Digite o valor de um angulo em graus!: \n");
-    scanf("%lf", &angulo);
-    printf("O angulo digitado eh: %lf\n", angulo);
-    angulo = angulo *(3.14 / 180.0);
-
-    seno = sin(angulo);
-    cosseno = cos(angulo);
-    tangente = tan(angulo);
-
-
-    printf("O resultado do seno, cosseno e tangente eh: %lf %lf %lf\n", seno, cosseno, tangente);
+    resultado = sqrt(numero);
+    printf("Resultado eh: %lf\n",resultado);
 
 
     return 0;
