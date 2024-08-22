@@ -4,13 +4,19 @@
 
 int main()
 {
-    double numero, resultado;
-    printf("Digite um numero para saber sua raiz: \n");
+    double numero;
+
+    printf("Digite um numero: \n");
     scanf("%lf", &numero);
 
-    resultado = sqrt(numero);
-    printf("Resultado eh: %lf\n",resultado);
-
-
+    if (numero > 10)
+    {
+      printf("Parabens voce eh top:");
+    }
+    else
+    {
+        printf("voce nao eh top");
+    }
+    
     return 0;
 }
