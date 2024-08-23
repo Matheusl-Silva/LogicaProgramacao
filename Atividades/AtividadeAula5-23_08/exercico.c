@@ -5,36 +5,47 @@
 void exericio1();
 void exercicio2();
 void exercicio3();
+void exercicio4();
+void exercicio05();
 
 int main()
 {
-    int escolha;
+ int escolha;
 
-    while (1)
-    {
-        printf("\nMenu\n");
-        printf("1. Exericio1\n");
-        printf("2. Exericio2\n");
-        printf("3. Exericio3\n");
-        scanf("%d", &escolha);
+ while (1)
+ {
+     printf("\nMenu\n");
+     printf("1. Exericio1\n");
+     printf("2. Exericio2\n");
+     printf("3. Exericio3\n");
+     printf("4. Exericio4\n");
+     printf("5. Exericio5\n");
+     scanf("%d", &escolha);
 
-        switch (escolha)
-        {
-        case 1:
-            exericio1();
-            break;
-        case 2:
-            exercicio2();
-            break;
-         case 3:
-            exercicio3();
-            break;
-        default:
-            printf("Escolha incorreta, escolha novamente.\n");
-        }
-    }
-    return 0;
-    
+     switch (escolha)
+     {
+     case 1:
+         exericio1();
+         break;
+     case 2:
+         exercicio2();
+         break;
+      case 3:
+         exercicio3();
+         break;
+      case 4:
+         exercicio4();
+         break;
+      case 5:
+         exercicio05();
+         break;
+         
+     default:
+         printf("Escolha incorreta, escolha novamente.\n");
+     }
+ }
+ return 0;
+
 }
 
 void exericio1()
@@ -71,3 +82,33 @@ void exercicio3()
 
     printf("O resultado da PA eh de:\nPA: %lf", PA);
 }
+
+void exercicio4()
+{
+    double x1, x2, y1, y2, distancia, raiz;
+
+    printf("Digite quatro pontos para descobrir a distancia: \n");
+    scanf("%lf %lf %lf %lf", &x1, &x2, &y1, &y2);
+
+    printf("x1: %lf\nx2: %lf\ny1: %lf\ny2: %lf\n", x1,x2,y1,y2);
+
+    raiz = sqrt(pow(x2 - x1,2) + pow(y2 - y1,2));
+    
+    distancia = raiz;
+    printf("O resultado da distancia eh de: \n%lf", distancia);
+}
+
+void exercicio05()
+{
+    double A, B, C, expre1, expre2;
+
+    printf("Digite 3 numeros para calcular as expressoes:\n");
+    scanf("%lf %lf %lf", &A, &B, &C);
+
+    expre1 = pow(A + B,2);
+    printf("O resultado da primeira conta eh de: %.2lf\n", expre1);
+    expre2 = pow(B + C,2);
+    printf("O resultado da segunda conta eh de: %.2lf\n", expre2);
+}
+
+ 
