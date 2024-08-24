@@ -4,18 +4,17 @@
 
 int main()
 {
-    double numero;
+    double x1, x2;
 
-    printf("Digite um numero: \n");
-    scanf("%lf", &numero);
+    printf("Digite dois numeros para verificar se sao iguais\n");
+    scanf("%lf %lf", &x1, &x2);
 
-    if (numero < 0)
+    if (x1 == x2)
     {
-      printf("o numero eh negativo");
+      printf("Os numeros sao iguais");
     }
-    else
-    {
-        printf("o numero eh positivo");
+    else{
+      printf("Nao sao iguais");
     }
     
     return 0;
