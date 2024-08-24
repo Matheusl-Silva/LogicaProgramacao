@@ -9,13 +9,13 @@ int main()
     printf("Digite um numero: \n");
     scanf("%lf", &numero);
 
-    if (numero > 10)
+    if (numero < 0)
     {
-      printf("Parabens voce eh top:");
+      printf("o numero eh negativo");
     }
     else
     {
-        printf("voce nao eh top");
+        printf("o numero eh positivo");
     }
     
     return 0;
