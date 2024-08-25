@@ -4,19 +4,17 @@
 
 int main()
 {
-    int numero, resultado;
+    double x1, x2, y1, y2, distancia, raiz;
+
+    printf("Digite quatro pontos para descobrir a distancia: \n");
+    scanf("%lf %lf %lf %lf", &x1, &x2, &y1, &y2);
+
+    printf("x1: %lf\nx2: %lf\ny1: %lf\ny2: %lf\n", x1,x2,y1,y2);
+
+    raiz = sqrt(pow(x2 - x1,2) + pow(y2 - y1,2));
     
-    printf("Digite um numero de 3 casas decimais: ");
-    scanf("%d", &numero);
-    if (numero < 100 || numero > 999)
-    {
-        printf("O numero deve ter apenas 3 digitios.\n");
-        return 1;
-    }
-
-    resultado = (numero / 10) % 10;
-
-    printf("O digito da casa das dezenas eh de %d\n");
+    distancia = raiz;
+    printf("O resultado da distancia eh de: \n%lf", distancia);
 }
 
 void exercicio01()
@@ -63,4 +61,41 @@ void exercicio04()
     velocidadeMedia = distancia / tempo;
 
     printf("A velocidade media percorrida eh de: %lf\n", velocidadeMedia);
+}
+
+void exercicio05 ()
+{
+    int numero, resultado;
+    
+    printf("Digite um numero de 3 casas decimais: ");
+    scanf("%d", &numero);
+    if (numero < 100 || numero > 999)
+    {
+        printf("O numero deve ter apenas 3 digitios.\n");
+        return 1;
+    }
+
+    resultado = (numero / 10) % 10;
+
+    printf("O digito da casa das dezenas eh de %d\n");
+}
+
+void exericio06()
+{
+    int dia, mes, ano;
+
+    printf("Digite um dia, mes e ano : \n");
+    scanf("%d %d %d", &dia, &mes, &ano);
+    if (dia > 31 || dia < 1)
+    {
+        printf("O dia deve estar entre 1 e 31");
+        return 1;
+    }
+    if (mes > 12 || mes < 1)
+    {
+        printf("O mes deve estar entre 1 e 12");
+        return 1;
+    }
+    printf("A data informada foi de: \nDia: %d\nMes: %d\nAno: %d\n", dia, mes, ano); 
+    
 }
