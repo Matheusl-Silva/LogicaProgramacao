@@ -80,20 +80,21 @@ void exercicio05 ()
 
 void exericio06()
 {
-    int dia, mes, ano;
+    int entrada, dia, mes, ano;
 
-    printf("Digite um dia, mes e ano : \n");
-    scanf("%d %d %d", &dia, &mes, &ano);
-    if (dia > 31 || dia < 1)
-    {
-        printf("O dia deve estar entre 1 e 31");
-        return 1;
-    }
-    if (mes > 12 || mes < 1)
-    {
-        printf("O mes deve estar entre 1 e 12");
-        return 1;
-    }
-    printf("A data informada foi de: \nDia: %d\nMes: %d\nAno: %d\n", dia, mes, ano); 
+    printf("Insira a data no formato (ddmmaa): \n");
+    scanf("%d", &entrada);
+
+    ano = entrada % 100;
+    entrada /= 100;
+
+    mes = entrada % 100;
+    entrada /= 100;
+
+    dia = entrada;
+
+    printf("dia: %d Mes: %d Ano: %d", dia, mes, ano);
+    
+    return 0;
     
 }
