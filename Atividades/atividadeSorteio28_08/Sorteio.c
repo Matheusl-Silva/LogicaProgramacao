@@ -74,9 +74,7 @@ void exercicio05 ()
         printf("O numero deve ter apenas 3 digitios.\n");
         return 1;
     }
-
     resultado = (numero / 10) % 10;
-
     printf("O digito da casa das dezenas eh de %d\n");
 }
 
