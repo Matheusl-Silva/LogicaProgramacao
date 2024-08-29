@@ -4,28 +4,27 @@
 
 int main()
 {
-    double a, b, c, delta, x1, x2;
+    int num1, num2;
 
-    printf("Digite tres valores para resolver bhaskara: \n");
-    scanf("%lf %lf %lf", &a, &b, &c);
+    printf("Digite dois numeros para verificar: \n");
+    scanf("%d %d", &num1, &num2);
 
-    delta = pow(b,2) - 4 * a * c;
-
-    if(delta < 0)
+    if ((num1 && num2) % 2 == 0)
     {
-        printf("A equacao esta errada bobao");
+        printf("Os numeros sao pares Parabens!");
     }
-    else
+    else if (num1 % 2 == 0)
     {
-        x1 = (-b + sqrt(delta)) / (2 * a);
-        printf("x1 = %lf\n", x1);
+        printf("O primeiro numero eh par");
     }
-        if (delta > 0)
-        {
-            x2 = (-b - sqrt(delta)) / (2 * a);
-            printf("x2 = %lf\n", x2);
-        }
-        
-
+    else if (num2 % 2 == 0)
+    {
+        printf("O segundo numero eh par");
+    }
+    else{
+        printf("Nenhum dos numeros eh par");
+    }
+    
+    
     return 0;
 }
