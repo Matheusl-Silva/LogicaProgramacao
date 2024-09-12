@@ -4,22 +4,28 @@
 
 int main()
 {
-    int i = 0, num_digitado = 0, soma = 0;
-    float media;
+    int num, maior, menor, primeiro = 0;
 
     do
     {
-        printf("Digite um numero, ou digite 0 para encerrar a aplicacao\n");
-        scanf("%d", &num_digitado);
-        soma += num_digitado;
-        if (num_digitado != 0)
+        printf("Digite um numero, ou digite 0- para sair\n");
+        scanf("%d", &num);
+        if (primeiro == 0)
         {
-            i++;
+            maior = menor = num;
+            primeiro++;
         }
-    } while (num_digitado != 0);
-
-    media = soma/i;
-    printf("Voce digitou %d numeros, a media eh: %.2f", i, media);
+        if (num < menor && num != 0)
+        {
+            menor = num;
+        }
+        if (num > maior && num != 0)
+        {
+            maior = num;
+        }
+        
+    } while (num != 0);
+     printf("o Maior numero digitado eh %d\ne o menor numero digitado eh %d\n", maior, menor);
 
     return 0;
 }
