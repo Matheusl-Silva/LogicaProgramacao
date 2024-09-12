@@ -4,15 +4,22 @@
 
 int main()
 {
-    int i = 1;
+    int i = 0, num_digitado = 0, soma = 0;
+    float media;
 
     do
     {
-        printf("Teste %d", i);
-        i++;
-    } while (i <= 10);
+        printf("Digite um numero, ou digite 0 para encerrar a aplicacao\n");
+        scanf("%d", &num_digitado);
+        soma += num_digitado;
+        if (num_digitado != 0)
+        {
+            i++;
+        }
+    } while (num_digitado != 0);
+
+    media = soma/i;
+    printf("Voce digitou %d numeros, a media eh: %.2f", i, media);
 
     return 0;
-    
-
 }
