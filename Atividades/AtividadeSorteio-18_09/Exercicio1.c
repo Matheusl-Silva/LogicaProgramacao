@@ -1,4 +1,4 @@
-#include <stdio.h>  // Inclua a biblioteca correta para printf e scanf
+#include <stdio.h>  
 
 int main ()
 {
@@ -29,10 +29,9 @@ int main ()
         }
     }
 
-    // Exibe os resultados
     printf("Total de homens: %d\n", total_homens);
     printf("Total de mulheres: %d\n", total_mulheres);
-    printf("Média das idades dos homens: %.2f\n", total_homens ? (float)somaHomens / total_homens : 0);
+    printf("Média das idades dos homens: %.2f\n", total_homens ? somaHomens / total_homens : 0);
     printf("Média dos pesos das mulheres: %.2f\n", total_mulheres ? somaMulheres / total_mulheres : 0);
 
     return 0;

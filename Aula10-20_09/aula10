@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int senha; int i = 3;
+
+    do{
+        printf("Digite a senha");
+        scanf("%d", &senha);
+        if(senha == 1786){
+            printf("Bom dia! Seja bem vindo!");
+            i =- 1;
+        }else{
+            printf("Senha invalida! Tente novamente.");
+            i--;
+            printf("Você possui 3 tentativas");
+        }
+
+    }while(i > 0);
+}
+
+
