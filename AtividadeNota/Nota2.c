@@ -18,27 +18,21 @@ int main()
         switch (escolha)
         {
         case 1:
-            printf("Digite a quantidade de produtos  da categoria A:\n ");
-            scanf("%d", &catA);
+            catA ++;
             break;
         case 2:
-            printf("Digite a quantidade de produtos  da categoria B:\n ");
-            scanf("%d", &catB);
+            catB++;
             break;
         case 3:
-            printf("Digite a quantidade de produtos  da categoria C:\n ");
-            scanf("%d", &catC);
+            catC++;
             break;
-            printf("Digite a quantidade de produtos  da categoria D:\n ");
-            scanf("%d", &catD);
+            catD++;
             break;
         case 5:
-            printf("Digite a quantidade de produtos  da categoria E:\n ");
-            scanf("%d", &catE);
+            catE++;
             break;
         case 6:
-            printf("Digite a quantidade de produtos que foi DEVOLVIDO:\n ");
-            scanf("%d", &dev);
+            dev++;
             break;                        
         case 7:
             printf("Saindo...\n");
