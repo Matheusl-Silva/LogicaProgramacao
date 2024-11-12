@@ -11,12 +11,12 @@ typedef struct {
 
 // Função para exibir as instruções do jogo
 void exibirInstrucoes() {
-    printf("\n-- INSTRUÇÕES DO JOGO --\n");
-    printf("1. O computador escolhe um número aleatório entre 1 e 100.\n");
-    printf("2. O jogador deve tentar adivinhar o número.\n");
-    printf("3. A cada tentativa, o computador informará se o número é maior ou menor.\n");
-    printf("4. O jogo termina quando o jogador adivinha o número ou decide sair.\n");
-    printf("5. O jogador pode sair a qualquer momento escolhendo a opção 'Sair' no menu.\n\n");
+    printf("\n-- INSTRUCOES DO JOGO --\n");
+    printf("1. O computador escolhe um numero aleatorio entre 1 e 100.\n");
+    printf("2. O jogador deve tentar adivinhar o numero.\n");
+    printf("3. A cada tentativa, o computador informara se o numero eh maior ou menor.\n");
+    printf("4. O jogo termina quando o jogador adivinha o numero ou decide sair.\n");
+    printf("5. O jogador pode sair a qualquer momento escolhendo a opcao 'Sair' no menu.\n\n");
 }
 
 // Função para iniciar o jogo
@@ -25,19 +25,19 @@ void iniciarJogo(Jogador* jogador) {
     numeroSorteado = rand() % 100 + 1;  // Gera um número aleatório entre 1 e 100
     jogador->tentativas = 0;  // Zera as tentativas a cada novo jogo
 
-    printf("\nAdivinha o número entre 1 e 100: ");
+    printf("\nAdivinha o numero entre 1 e 100: ");
     while (1) {
         printf("Digite seu palpite: ");
         scanf("%d", &palpite);
         jogador->tentativas++;
 
         if (palpite == numeroSorteado) {
-            printf("Parabéns, %s! Você adivinhou o número em %d tentativas.\n", jogador->nome, jogador->tentativas);
+            printf("Parabens, %s! Voce adivinhou o numero em %d tentativas.\n", jogador->nome, jogador->tentativas);
             break;
         } else if (palpite < numeroSorteado) {
-            printf("Tente um número maior.\n");
+            printf("Tente um numero maior.\n");
         } else {
-            printf("Tente um número menor.\n");
+            printf("Tente um numero menor.\n");
         }
     }
 }
@@ -49,9 +49,9 @@ void exibirMenu(Jogador* jogador) {
     while (1) {
         printf("\n-- MENU PRINCIPAL --\n");
         printf("1. Iniciar novo jogo\n");
-        printf("2. Instruções\n");
+        printf("2. Instrucoes\n");
         printf("3. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
@@ -62,10 +62,10 @@ void exibirMenu(Jogador* jogador) {
                 exibirInstrucoes();  // Exibe as instruções
                 break;
             case 3:
-                printf("Saindo do jogo... Até logo!\n");
+                printf("Saindo do jogo... Ate logo!\n");
                 return;  // Encerra o programa
             default:
-                printf("Opção inválida! Tente novamente.\n");
+                printf("Opçao invalida! Tente novamente.\n");
         }
     }
 }
