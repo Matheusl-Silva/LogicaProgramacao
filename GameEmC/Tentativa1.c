@@ -18,6 +18,33 @@ void exibirInstrucoes(){
     printf("5. O jogador pode sair a qualquer momento escolhendo a opcao 'Sair' no menu.\n\n");
 }
 
+void exibirMenu(jogador jogador) {
+    int opcao;
+
+    while (1) {
+        printf("\n-- MENU PRINCIPAL --\n");
+        printf("1. Iniciar novo jogo\n");
+        printf("2. Instrucoes\n");
+        printf("3. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                iniciarJogo(jogador);  // Inicia o jogo
+                break;
+            case 2:
+                exibirInstrucoes();  // Exibe as instruções
+                break;
+            case 3:
+                printf("Saindo do jogo... Ate logo!\n");
+                return;  // Encerra o programa
+            default:
+                printf("Opçao invalida! Tente novamente.\n");
+        }
+    }
+}
+
 void iniciarJogo(jogador jogador){
     int numeroSorteado, palpite, i = 0;
     numeroSorteado = rand() % 100 + 1;
@@ -48,7 +75,6 @@ int main(){
     printf("Digite seu nome: ");
     fgets(jogador.nome, sizeof(jogador.nome), stdin);
 
-    exibirInstrucoes();
-    iniciarJogo(jogador);
+    exibirMenu(jogador);
     
 }
